@@ -1,0 +1,194 @@
+/*paleta de cores:
+https://coolors.co/7400b8-6930c3-5e60ce-5390d9-4ea8de-48bfe3-56cfe1-64dfdf-72efdd-80ffdb
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Henny Penny', cursive;
+    background-color: #7400B8;
+    color: #64DFDF;
+    padding: 1%;
+}
+
+h2{
+    text-align: center;
+    margin: 2% 27% 0% 25%;
+    background-color:#5E60CE; 
+    color: #48BFE3;
+}
+
+
+nav{
+    padding: 1% 20% ;
+    background-color: #5E60CE;
+}
+
+a{
+    color: #80FFDB;
+    text-decoration: none;
+}
+a:hover{
+    text-shadow: 2px 2px #7400B8;
+}
+
+li{
+    display: inline;
+    margin: 5px;
+    padding: 2px;
+    color: white;
+    
+}
+footer{
+    margin-bottom: 0;
+    text-align: center;
+}
+
+table{
+    margin: 3% 25% ;
+    font-family: 'Turret Road', cursive;
+    text-align: center;
+}
+
+tr{
+    background-color: #64DFDF;
+}
+
+form{
+    margin: 0% 40%;
+    background-color: #6930C3;
+    padding: 1% 0% 0% 3%;
+    border-radius: 20%;
+}
+
+label{
+    font-family: 'Turret Road', cursive;
+    color:#80FFDB;
+}
+
+input{
+    margin-bottom: 5px;
+    border-radius: 20%;
+}
+
+button{
+    margin: 5% 24%;
+    background-color: #5390D9;
+    color: #80FFDB;
+    padding: 3%;
+    border-radius: 20%;
+}
+
+button:hover{
+    background-color: #48BFE3;
+    color: #6930C3;
+}
+
+#login{
+    position: fixed;
+    float: left;
+    z-index: 1;
+    top: 0%;
+    right: 2%;
+    padding: 1%;
+    background-color: gray;
+    color: white;
+    box-shadow: 1px 4px 10px #80FFDB;
+
+}
+
+#login:hover{
+    background-color: #6930C3;
+}
+
+button:active{
+    background-color: #7400B8;
+}
+
+#marcas{
+    background-color: #6930C3;
+    margin: 5% 2% 2% 2%;
+    padding: 2%;
+}
+
+#funcionarios{
+    margin: 0% 40%;
+    padding: 1% 0% 5% 3%;
+    background-color: #6930C3;
+    border-radius: 5%;
+}
+
+#carrinho{
+    width:2%;
+    left: 0;
+}
+
+.vendas{
+    background-color: #5390D9;
+}
+
+.fundo_foto{
+    background-color: white;
+}
+
+.centralizar_titulo{
+    text-align: center;
+    margin: 2% 30%;
+    background-color:#5E60CE; 
+    color: #48BFE3;
+}
+
+.lista_funcionarios{
+    margin: 5%;
+    padding: 0% 3% 1% 1%;
+    display:block;
+    color:#80FFDB;
+}
+
+.subtitulo{
+    text-align: center;
+    background-color:#64DFDF;
+    color: #7400B8;
+}
+
+.casa{
+    width: 3%;
+    padding: 0;
+}
+
+.conteudo{
+    background-color: #56CFE1;
+    color:#7400B8;
+    margin:2%;
+    padding: 2%;
+    border: 5px solid #5E60CE;
+    text-align: center;
+}
+
+.rede{
+    color:#48BFE3;
+    margin-top:5%;
+    margin-bottom: 2%;
+}
+
+.redes_sociais{
+    width: 3%;
+    filter: brightness(50%)
+}
+
+.redes_sociais:hover{
+    filter: brightness(150%);
+}
+
+.proporcao_img{
+    width: 20vw;
+}
+
+.aumentar_texto{
+    font-size: larger;
+    font-weight: bolder;
+}
