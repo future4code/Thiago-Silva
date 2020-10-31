@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Projeto Labenu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="stilo.css" media="screen" />
+
+</head>
+
+<body>
+
+	<h1>Projeto Seletivo Labenu</h1>
+
+	<img src="Labenu_logo.png" alt="logo Labenu" title="logo" class="logo"/>
+ <br/>
+ <div>
+  <p>Turmas de 2020</p>
+ </div>
+
+  <section class="bloco">
+
+    <div class="caixa1">
+      <span>HTML</span>
+    </div>
+    <div class="caixa2">
+      <span>CSS</span>
+    </div>
+    <div class="caixa3">
+      <span>Javascript</span>
+    </div>
+
+  </section>
+
+  <div class="bloco_email">
+    <input type="email" id="email" name="email" autocomplete="off" placeholder="Coloque o seu e-mail para Contato :)" class="email text-input">
+    <input type="submit" value="Enviar" onclick="email_digitado()" class="botao"/>
+  </div>
+
+<script>
+  var email_aluno = ""
+  var nome = ""
+  var site = ""
+  
+  function email_digitado(){
+    email_aluno = document.getElementById('email').value
+
+    nome = email_aluno.substring(0, email_aluno.indexOf("@"))
+    site = email_aluno.substring(email_aluno.indexOf("@")+1, email_aluno.length)
+
+  if((nome.length >=1) &&
+    (site.length >=3) &&
+    (nome.search("@")==-1) &&
+    (site.search("@")==-1) &&
+    (nome.search(" ")==-1) &&
+    (site.search(" ")==-1) &&
+    (site.search(".")!=-1) &&
+    (site.indexOf(".")>=1)&&
+    (site.lastIndexOf(".") < site.length - 1)){
+    
+    alert("O email "+ email_aluno +" foi enviado")
+  }
+  else{
+    alert("Email inválido")
+  }
+  }
+
+</script>
+
+</body>
+</html>

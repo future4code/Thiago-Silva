@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #caf0f8;
+}
+
+a:link{
+    color: #001233;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #001233;
+    text-decoration: none;
+}
+
+a:hover{
+    text-shadow: 1px 2px #819FF7;
+}
+
+h1{
+    margin: 1px 10px 30px 5px;
+    text-align: center;
+    font-family: 'Turret Road', cursive;
+    font-size: 100%;
+}
+
+h3{
+    margin: 60px 10px 30px 5px;
+    text-align: center;
+    font-family: 'Turret Road', cursive;
+    font-size: 100%;
+}
+
+li{
+    list-style-type: none;
+}
+
+input{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+button{
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #74DF00;
+    color: white
+}
+
+footer{
+    background-color: #00296b;
+}
+
+.logo{
+    color: #001233;
+    text-shadow: 1px 2px #0466C8;
+    padding: 5px;
+    font-family: 'Turret Road', cursive;
+    font-size: 35px;
+}
+
+.menu{
+    padding:5px;
+    margin-left: 190px;
+    margin-top: -35px;
+}
+
+.voltar_topo{
+    position: fixed;
+    float: left;
+    z-index: 0;
+    bottom: 5%;
+    right: 2%;
+    width:3%;
+}
+
+.fonts{
+    font-family: 'Turret Road', cursive;
+    padding: 30px;
+}
+
+.sobre{
+    position: absolute;
+    float: left;
+    z-index: 0;
+    top: 0%;
+    right: 2%;
+    width: 25%;
+    padding: 10px;
+    background-color:#EFF8FB;
+    box-shadow: 0px 0px 16px #666;
+}
+
+.perfil{
+    margin: 0px 1px 20px 90px;
+    border-radius: 100%;
+}
+
+.links{
+    text-decoration: violet;
+    background-color: teal;
+}
+
+.icone_labenu{
+    width: 8%;
+}
+
+.tamanho_funko{
+    width: 262px;
+}
+.tamanho_mario{
+    width: 315px;
+}
+
+.tamanho_anime{
+    width: 277px;
+}
+
+.titulo_projetos{
+    margin-top: 50px;
+    margin: 0% 14% 0% 0%;
+    padding: 0% 0%;
+    text-align: center;
+    color: #001233;
+    font-weight: bolder;
+}
+
+.descricao_projetos{
+    margin-top: 50px;
+    margin: 0% 14% 0% 0%;
+    padding: 0% 0%;
+    text-align: center;
+    color: #001233;
+}
+
+.tecnologia_utilizada{
+    margin-top: 50px;
+    margin: 0% 14% 0% 0%;
+    padding: 0% 0%;
+    text-align: center;
+    color: #001233;
+    border: solid;
+}
+
+.habilidades{
+    width: 60%;
+    margin: 5% 10% 3% 4%;
+    padding: 0% 2% 1% 2%;
+    font-size: 2vw;
+    background-color: #4ecdc4;
+    color: #8d0801;
+    border-radius: 10%;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.titulo_habilidades{
+    padding: 3% 0% 0% 0%;
+}
+
+.texto_habilidades{
+    padding: 1% 1% 3% 3% ;
+}
+
+.recado{
+    color: white;
+    margin: 0% 50% 10% 25%;
+    padding-left: 5%;
+    padding-bottom: 2%;
+    border: 1px solid #819FF7;
+    border-radius: 20px;
+    box-shadow: 5px 10px 8px #888888;
+    background-color: #819FF7;
+}
+
+.titulo_recado{
+    margin: 10px 90px 10px 0px;
+}
+
+.bloco_redes_sociais{
+    width: 20%;
+    margin: 0% 26%;   
+}
+
+.comentario{
+    padding-bottom: 50px;
+}
+
+.rede_titulo{
+    margin-left: 32%;
+    padding: 5% 0% 3% 0%;
+    font-size: 110%;
+    font-family: 'Turret Road', cursive;
+    color:white;
+}
+
+.redes_sociais{
+    width: 15%;
+    filter: grayscale(100%);
+    margin-left: 3%;
+    margin-right: 0.1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.redes_sociais:hover{
+    filter: grayscale(0%);
+}
+
+#projetos{
+    margin: 1% 35% 0% 15%;
+    padding: 10px 50px;
+    font-family: 'Turret Road', cursive;
+    font-size: 30px;
+    background-color: white;
+    box-shadow: 5px 10px 8px turquoise;
+}
+
+#ajuste_projetos{
+    width: 70%;
+    margin: 5% 0% 10% 1%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
