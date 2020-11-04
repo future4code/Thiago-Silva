@@ -109,11 +109,19 @@ table {
 }
 
 td button {
-    background-color: #fadf63;
+    background-color: #ebd780;
     width: 150px;
     height: 30px;
     border-radius: 5px;
     color: black;
+}
+
+td button:active{
+    color: white;
+}
+
+td button:hover{
+    background-color: #f1c607;
 }
 
 .container-do-search {
