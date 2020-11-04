@@ -53,6 +53,10 @@ li{
     background: black;
 } */
 
+.centralizar{
+    margin-left: 50%;
+}
+
 .botao-amarelo {
     background-color: #ffaf43;
     width: 250px;
@@ -67,7 +71,7 @@ li{
 }
 
 .container {
-    height: 500px;
+    height: 200px;
     text-align: center;
 }
 
@@ -102,6 +106,7 @@ li{
 
 #container-para-comprar {
     background-color: #e7eb90;
+    height: 340px;
 }
 
 #container-para-comprar>p {
@@ -144,6 +149,10 @@ td button:hover{
     background-color: #f1c607;
 }
 
+td button:visited{
+    color: black;
+}
+
 .container-do-search {
     margin-top: 20px;
     height: 100px;
@@ -151,6 +160,7 @@ td button:hover{
 
 
 #back-button {
+    margin: auto;
     background-color: white;
     width: 100px;
     height: 20px;
