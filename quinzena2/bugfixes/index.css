@@ -16,6 +16,10 @@ h2 {
     text-align: center;
 }
 
+a:visited{
+    text-decoration: none;
+}
+
 input {
     height: 20px;
     width: 500px;
