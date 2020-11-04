@@ -16,8 +16,9 @@ h2 {
     text-align: center;
 }
 
-a:visited{
-    text-decoration: none;
+a{
+    display: block;
+    margin: 5%;
 }
 
 input {
