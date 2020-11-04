@@ -41,6 +41,13 @@ div>p:first-child {
     display: inline;
 }
 
+ol{
+    margin-left: 40%;
+}
+li{
+    margin-right: 70%;
+}
+
 /* div img {
     background: black;
 } */
