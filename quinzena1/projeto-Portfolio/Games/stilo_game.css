@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    background-image: url("img/mario.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 5% 25% 20% 30%;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h3{
+    padding-bottom: 20px;
+}
+
+
+a:link{
+    color: #001233;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #001233;
+    text-decoration: none;
+}
+
+a:hover{
+    text-shadow: 1px 2px white;
+}
+
+a:active{
+    text-decoration: none;
+}
+
+nav{
+    padding: 1% 20% ;
+    background-color: #5E60CE;
+}
+
+p{
+    padding-right: 10%;
+}
+
+input{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+button{
+    color:white;
+    background: black;
+    transition: background 1s;
+    font-family: 'Press Start 2P', cursive;
+    padding: 1%;
+    border-radius: 25%;
+}
+
+button:hover,
+button:focus {
+    background: green;
+}
+
+.kirby{
+    position: fixed;
+    float: left;
+    bottom: 1%;
+    right: 8%;
+    width: 25%;
+    padding: 2% 0% 4% 1%;
+    z-index: 0;
+}
+
+.centro{
+    background-image: url(img/press_start.gif);
+    padding: 2% 5% 20% 50%;
+}
+
+.quem_somos{
+    position: absolute;
+    float: left;
+    z-index: 1;
+    top: 72%;
+    right: 8%;
+    width: 25%;
+    padding: 2% 0% 4% 1%;
+    background-color:#EFF8FB;
+    box-shadow: 0px 0px 16px #666;
+}
+
+.formulario_game_favorito{
+    position: absolute;
+    float: left;
+    z-index: 1;
+    top: 135%;
+    right: 8%;
+    width: 25%;
+    padding: 2% 0% 4% 1%;
+    background-color:#EFF8FB;
+    box-shadow: 0px 0px 16px #666;
+}
+
+.tamanho_moeda{
+    width: 5%;
+}
+
+.tamanho_pokeZel{
+    width: 35%;
+}
+
+.espaco{
+    padding-left: 1%;
+    font-family: 'Itim', cursive;
+}
+
+.ajuste_imagens{
+    width: 70%;
+    margin: 5% 0% 2% 1%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.config_img{
+    width: 500px;
+    margin: 5% 0% 0% 1%;
+}
+
+.config_texto{
+    width: 50%;
+    padding: 2%;
+    background-color: lightcyan;
+}
