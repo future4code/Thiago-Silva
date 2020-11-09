@@ -1,0 +1,148 @@
+#level_1_pond {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#level_2_pond {
+    display: flex;
+    justify-content:center;
+}
+
+#level_3_pond {
+    display: flex;
+    justify-content:space-around
+}
+
+#level_4_pond {
+    display: flex;
+    justify-content: space-between;
+}
+
+#level_5_pond {
+    display: flex;
+    align-items:flex-end;
+}
+
+#level_6_pond {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#level_7_pond {
+    display: flex;
+    justify-content:space-around;
+    align-items:flex-end;
+}
+
+#level_8_pond {
+    display: flex;
+    flex-direction:row-reverse;
+}
+
+#level_9_pond {
+    display: flex;
+    flex-direction:column
+}
+
+#level_10_pond {
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content:flex-end;
+}
+
+#level_11_pond {
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+}
+
+#level_12_pond {
+    display: flex;
+    flex-direction:column-reverse;
+    justify-content:space-between;
+}
+
+#level_13_pond {
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content:center;
+    align-items:flex-end;
+}
+
+#level_14_pond {
+    display: flex;
+}
+  
+.level_14_yellow {
+    order:1;
+}
+
+#level_15_pond {
+    display: flex;
+}
+  
+.level_15_red {
+order:-3
+}
+
+#level_16_pond {
+    display: flex;
+    align-items: flex-start;
+}
+  
+.level_16_yellow {
+    align-self:flex-end;
+}
+
+#level_17_pond {
+    display: flex;
+    align-items: flex-start;
+}
+  
+.level_17_yellow {
+    order:2;
+    align-self:flex-end;
+}
+
+#level_18_pond {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+#level_19_pond {
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+}
+
+#level_20_pond {
+    display: flex;
+    flex-flow:column wrap;
+}
+
+#level_21_pond {
+    display: flex;
+    flex-wrap: wrap;
+    align-content:flex-start;
+}
+
+#level_22_pond {
+    display: flex;
+    flex-wrap: wrap;
+    align-content:flex-end;
+}
+
+#level_23_pond {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column-reverse;
+    align-content:center;
+}
+
+#level_24_pond {
+    display: flex;
+    flex-flow: column-reverse wrap-reverse;
+    justify-content:center;
+    align-content:space-between;
+}
