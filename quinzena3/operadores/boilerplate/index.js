@@ -57,6 +57,86 @@
 
 // console.log("O e-mail ", emailDoUsuario," foi cadastrado com sucesso. Seja bem-vinda(o), ", nomeDoUsuario,"!")
 
+//  DESAFIO:
+
+// 1.
+
+// a)
+
+// let kelvin = 0
+// let fahrenheit = 77
+
+// kelvin = (fahrenheit - 32)*5/9 + 273.15
+// console.log(fahrenheit,"ºF é igual a ", kelvin,"K")
+
+// // b)
+
+// let celsius = 80
+
+// fahrenheit = celsius *9/5 + 32
+// console.log(celsius,"ºC é igual a ", fahrenheit,"ºF")
+
+// // c)
+
+// celsius = 30
+// fahrenheit = celsius *9/5 + 32
+// kelvin = (fahrenheit - 32)*5/9 + 273.15
+// console.log(celsius,"ºC é igual a ", fahrenheit,"ºF e ", kelvin ,"K")
+
+
+// // d)
+// celsius = prompt("Insira a temperatura em Celsius")
+// fahrenheit = celsius *9/5 + 32
+// kelvin = (fahrenheit - 32)*5/9 + 273.15
+// console.log(celsius,"ºC é igual a ", fahrenheit,"ºF e ", kelvin ,"K")
+
+
+// 2.
+// let quilowattsConsumida = 280
+// let valorEnergia = 0.05
+// let valorConsumo = quilowattsConsumida * valorEnergia
+// console.log("Foi consumido 280 quilowatts-hora, seu valor é de ", valorConsumo)
+
+// // b)
+// valorComDesconto = (valorConsumo*15)/100
+// console.log("o valor com desconto fica: ",valorComDesconto)
+
+// 3.
+// a)
+// let libras = 20
+// let quilogramas = libras*0.453592
+// console.log(libras,"lb equivalem a ", quilogramas," kg")
+
+// b)
+// let onca = 10.5
+// let quilogramas = onca*0.0283495
+// console.log(onca,"oz equivalem a ", quilogramas,"kg")
+
+// c)
+//  let milha = 100
+//  let metro = milha*1609.34
+//  console.log(milha,"mi equivalem a ", metro,"m")
+
+// d)
+// let pes = 50
+// let metro = pes*0.3048
+// console.log(pes,"ft equivalem a ", metro,"m")
+
+// e)
+// let galao = 103.56
+// let litro = galao*3.78541
+// console.log(galao,"gal equivalem a ", litro,"l")
+
+// f)
+// let xicara = 450
+// let litro = xicara*0.24
+// console.log(xicara,"xic equivalem a ", litro,"l")
+
+// g)
+
+let xicara = prompt("Quantas xicaras você vai adicionar?")
+let litro = xicara*0.24
+console.log(xicara,"xic equivalem a ", litro,"l")
 
 
 
