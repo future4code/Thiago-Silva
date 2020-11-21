@@ -35,7 +35,7 @@
 // se o usuário inserir um número impar, o resto da divisão por 2 será sempre 1
 
 
-// 3.
+//3.
 // let listaDeTarefas = []
 
 // listaDeTarefas.push(prompt("Quais tarefas você precisa realizar hoje?"))
@@ -134,9 +134,9 @@
 
 // g)
 
-let xicara = prompt("Quantas xicaras você vai adicionar?")
-let litro = xicara*0.24
-console.log(xicara,"xic equivalem a ", litro,"l")
+// let xicara = prompt("Quantas xicaras você vai adicionar?")
+// let litro = xicara*0.24
+// console.log(xicara,"xic equivalem a ", litro,"l")
 
 
 
