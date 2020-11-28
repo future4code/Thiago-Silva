@@ -18,8 +18,8 @@
 // 0000
 
 // EXERCÍCIO 3
-let arrayOriginal = [10,25,31,49,50,67,79,18,29]
-console.log(arrayOriginal)
+// let arrayOriginal = [10,25,31,49,50,67,79,18,29]
+// console.log(arrayOriginal)
 // a.
 // for(numero of arrayOriginal){
 //     console.log(numero)
@@ -76,3 +76,58 @@ console.log(arrayOriginal)
 // }
 
 // console.log("O maior número é ,", valorMaximo," e o menor é ", valorMinimo)
+
+//DESAFIO 2
+
+// const numeroP1 = Number(prompt("Player 1 - Digite um número"))
+// let chutesP2
+// let tentativas = 0
+
+// console.log("Vamos Jogar!")
+
+// while(chutesP2 !== numeroP1){
+//     chutesP2 = Number(prompt("Player 2 - Chute um número"))
+//     tentativas++
+//     console.log("O número chutado foi:", chutesP2)
+//     if(chutesP2 !== numeroP1){
+
+//         if(chutesP2 > numeroP1){
+//             alert("Errou. O número escolhido é MENOR. Aperte Enter para continuar")
+//         }else {
+//             alert("Errou. O número escolhido é MAIOR. Aperte Enter para continuar")
+//         }   
+//     }else if(chutesP2 === numeroP1){
+//         console.log("Acertou!!")
+//         console.log("O número de tentativas foi: ", tentativas)
+//     }else{
+//         console.log("ocorreu um erro, por gentileza, reinicie o jogo")
+//     }
+// }
+
+// // DESAFIO 3
+
+// const numeroComputador = Math.floor((Math.random() * 100) + 1)
+
+// let chutes
+// let tentativas = 0
+
+// console.log("Vamos Jogar!")
+
+// while(chutes !== numeroComputador){
+//     chutes = Number(prompt("Chute um número de 1 a 100"))
+//     tentativas++
+//     console.log("O número chutado foi:", chutes)
+//     if(chutes !== numeroComputador){
+
+//         if(chutes > numeroComputador){
+//             alert("Errou. O número escolhido é MENOR. Aperte Enter para continuar")
+//         }else {
+//             alert("Errou. O número escolhido é MAIOR. Aperte Enter para continuar")
+//         }   
+//     }else if(chutes === numeroComputador){
+//         console.log("Acertou!!")
+//         console.log("O número de tentativas foi: ", tentativas)
+//     }else{
+//         console.log("ocorreu um erro, por gentileza, reinicie o jogo")
+//     }
+// }
