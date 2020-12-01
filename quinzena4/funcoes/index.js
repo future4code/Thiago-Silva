@@ -1,3 +1,4 @@
+
 // Exercícios de interpretação de código
 // EXERCÍCIO 1
 // a. 10 50
