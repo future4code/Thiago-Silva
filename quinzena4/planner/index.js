@@ -21,8 +21,9 @@ function limparRisco(obj){
 }
 
 function limparTudo(){
-    const tarefas = document.getElementsByClassName('semana')
-    for(tarefas of numero){
-        tarefas[numero].innerHTML = ""
+    let tarefas = document.getElementsByClassName('limpar')
+    for(tarefas of numeros){
+        let limpeza = tarefa[numeros]
+        limpeza.innerHTML = ""
     }
 }
