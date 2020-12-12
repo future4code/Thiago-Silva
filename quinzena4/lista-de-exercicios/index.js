@@ -43,3 +43,22 @@
 // })
 
 
+// 2.
+// a) false
+// b) false
+// c) true
+// d) true
+// e) true
+
+
+// 3. Não funciona, a variável deve ser um let, para pegar os vários número, não será um número único
+// o while está fazendo uma comparação enter 0 e nenhum valor definido
+// se while conseguisse executar o cosole daria 0 somente
+let quantidadeDeNumerosPares = Number(prompt("escreva um número"))
+let i = 0
+while(quantidadeDeNumerosPares > 0) {
+    console.log(i*2)
+    i++
+    quantidadeDeNumerosPares--
+   
+}
