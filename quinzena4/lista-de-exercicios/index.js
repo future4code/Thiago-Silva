@@ -23,6 +23,8 @@
 // imprime o valor da variável numero1(-10) e da variável numero2(1590)
 
 
+
+
 // ---  Exercícios de Lógica de Programação  ---
 
 // 1.
@@ -87,39 +89,63 @@
 
 
 // 5.
-let comparadorDeNumeros = (num1, num2) =>{
+// let comparadorDeNumeros = (num1, num2) =>{
     
-    if(num1 > num2){
-        console.log(`O maior é: ${num1}`)
-    }
-    else if(num2 > num1){
-        console.log(`O maior é: ${num2}`)
-    }
+//     if(num1 > num2){
+//         console.log(`O maior é: ${num1}`)
+//     }
+//     else if(num2 > num1){
+//         console.log(`O maior é: ${num2}`)
+//     }
 
-    if(num1 % num2 === 0){
-        console.log(`${num1} é divisivel por ${num2}`)
-    }else{
-        console.log(`${num1} não é divisivel por ${num2}`)
-    }
+//     if(num1 % num2 === 0){
+//         console.log(`${num1} é divisivel por ${num2}`)
+//     }else{
+//         console.log(`${num1} não é divisivel por ${num2}`)
+//     }
 
-    if(num2 % num1 === 0){
-        console.log(`${num2} é divisivel por ${num1}`)
-    }else{
-        console.log(`${num2} não é divisivel por ${num1}`)
-    }
+//     if(num2 % num1 === 0){
+//         console.log(`${num2} é divisivel por ${num1}`)
+//     }else{
+//         console.log(`${num2} não é divisivel por ${num1}`)
+//     }
 
-    let diferenca = num1 - num2
+//     let diferenca = num1 - num2
 
-    if(diferenca >= 0){
-        console.log(`A diferença entre eles é ${diferenca}`)
-    }else{
-        diferenca *= -1
-        console.log(`A diferença entre eles é ${diferenca}`)
-    }
+//     if(diferenca >= 0){
+//         console.log(`A diferença entre eles é ${diferenca}`)
+//     }else{
+//         diferenca *= -1
+//         console.log(`A diferença entre eles é ${diferenca}`)
+//     }
+// }
+
+// let primeiroNumero = Number(prompt("Digite o primeiro número"))
+// let segundoNumero = Number(prompt("Digite o segundo número"))
+
+// comparadorDeNumeros(primeiroNumero, segundoNumero)
+
+
+
+
+//  ---  Exercícios de Funções  ---
+// 1.
+const array = [50, 30, 20, 10, 33, 27, 73, 100, 1920, 7000]
+
+let numerosExtremos = (array) => {
+    let maiorNumero = 0
+    let menorNumero = Infinity
+    array.forEach((num) => {
+        if(num > maiorNumero){
+            maiorNumero = num
+        }
+        else if(num < menorNumero){
+            menorNumero = num
+        }
+    })
+    imprimirNumeros = document.getElementById("numerosExtremos")
+
+    imprimirNumeros.innerHTML += `O maior número é ${maiorNumero} e o menor número é ${menorNumero}`
 }
 
-let primeiroNumero = Number(prompt("Digite o primeiro número"))
-let segundoNumero = Number(prompt("Digite o segundo número"))
-
-comparadorDeNumeros(primeiroNumero, segundoNumero)
-
+numerosExtremos(array)
