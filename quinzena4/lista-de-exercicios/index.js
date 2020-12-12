@@ -90,7 +90,7 @@
 
 // 5.
 // let comparadorDeNumeros = (num1, num2) =>{
-    
+
 //     if(num1 > num2){
 //         console.log(`O maior é: ${num1}`)
 //     }
@@ -130,30 +130,84 @@
 
 //  ---  Exercícios de Funções  ---
 // 1.
-const array = [50, 30, 20, 10, 33, 27, 73, 100, 1920, 7000]
+// const array = [50, 30, 20, 10, 33, 27, 73, 100, 1920, 7000]
 
-let numerosExtremos = (array) => {
-    let maiorNumero = 0
-    let menorNumero = Infinity
-    array.forEach((num) => {
-        if(num > maiorNumero){
-            maiorNumero = num
-        }
-        else if(num < menorNumero){
-            menorNumero = num
-        }
-    })
-    imprimirNumeros = document.getElementById("numerosExtremos")
+// let numerosExtremos = (array) => {
+//     let maiorNumero = 0
+//     let menorNumero = Infinity
+//     array.forEach((num) => {
+//         if(num > maiorNumero){
+//             maiorNumero = num
+//         }
+//         else if(num < menorNumero){
+//             menorNumero = num
+//         }
+//     })
+//     imprimirNumeros = document.getElementById("numerosExtremos")
 
-    imprimirNumeros.innerHTML += `O maior número é ${maiorNumero} e o menor número é ${menorNumero}`
-}
+//     imprimirNumeros.innerHTML += `O maior número é ${maiorNumero} e o menor número é ${menorNumero}`
+// }
 
-// numerosExtremos(array)
+// // numerosExtremos(array)
+
+// // 2.
+// const mensagem = () => {
+//     alert("Hellow Muyembe - Labenu")
+//     numerosExtremos(array)
+// }
+
+// mensagem()
+
+
+
+// ---  Exercícios de Objetos  ---
+// 1. Quando temos uma lista de coisas que possuem características
+// específicas é necessário utilizar um array de objetos, 
+// como exemplo: o cadastro de um cliente em uma loja de ecommerce
+// o cliente terá cadastrado o seu nome, endereço, forma de pagamento, telefone, e-mail, dentre outros,
+// isso formará um objeto Cliente, como nosso ecommerce tem vários clientes temos um array de objetos Cliente
+
 
 // 2.
-const mensagem = () => {
-    alert("Hellow Muyembe - Labenu")
-    numerosExtremos(array)
-}
+// let criaRetangulo = (lado1, lado2) => {
 
-mensagem()
+//     console.log(`Largura: ${lado1}; Altura: ${lado2}`)
+
+//     let perimetro = 2 * (lado1 + lado2)
+//     console.log(`perimetro: ${perimetro}`)
+
+//     let area = lado1 * lado2
+//     console.log(`Área: ${area}`)
+// }
+
+// alert("Digite os lados do retângulo")
+// let largura = Number(prompt("Digite a Largura do retângulo"))
+// let altura = Number(prompt("Digite a Altura do retângulo"))
+
+// criaRetangulo(largura, altura)
+
+
+
+// 3.
+// let relacaoAtores = ["Scarlett Johansson","Robert Downey Jr.","Chris Hemsworth"]
+
+// let filme = { titulo: "Os Vingadores", ano: "2012", diretor: "Joss Whedon, Joe Russo, Anthony Russo", atores: relacaoAtores}
+
+// filme.forEach((dados) => {
+//     informacoesFilme = document.getElementById("filme")
+//     informacoesFilme.innerHTML += `Venha assistir ao filme ${dados.titulo}, de ${dados.ano}, 
+//                                     dirigido por ${dados.diretor} e 
+//                                     estrelado por ${dados.atores}.`
+// })
+
+
+// 4.
+// let pessoa = {nome: "Thiago", email:"thiago@gmail.com", endereco:"rua do alvorecer, 73"}
+
+
+// let anonimizarPessoa = (pessoa) => {
+//     pessoa.nome = "ANÔNIMO"
+//     console.log(pessoa)
+// }
+
+// anonimizarPessoa(pessoa)
