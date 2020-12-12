@@ -148,4 +148,12 @@ let numerosExtremos = (array) => {
     imprimirNumeros.innerHTML += `O maior número é ${maiorNumero} e o menor número é ${menorNumero}`
 }
 
-numerosExtremos(array)
+// numerosExtremos(array)
+
+// 2.
+const mensagem = () => {
+    alert("Hellow Muyembe - Labenu")
+    numerosExtremos(array)
+}
+
+mensagem()
