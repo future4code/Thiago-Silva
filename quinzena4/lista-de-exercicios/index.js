@@ -65,22 +65,61 @@
 
 
 // 4.
-let triangulo = (ladoA, ladoB, ladoC) => {
-    if (ladoA === ladoB && ladoB === ladoC) {
-        alert("Triângulo Equilátero")
+// let triangulo = (ladoA, ladoB, ladoC) => {
+//     if (ladoA === ladoB && ladoB === ladoC) {
+//         alert("Triângulo Equilátero")
+//     }
+//     else if (ladoA === ladoB || ladoB === ladoC || ladoC === ladoA) {
+//         alert("Triângulo Isósceles")
+//     }
+//     else if (ladoA !== ladoB && ladoB !== ladoC && ladoC !== ladoA) {
+//         alert("Triângulo Escaleno")
+//     }
+// }
+
+// alert("Digite os lados para saber que tipo é o triângulo:")
+
+// let ladoA = prompt("Digite o primeiro lado do triângulo")
+// let ladoB = prompt("Digite o segundo lado do triângulo")
+// let ladoC = prompt("Digite o terceiro lado do triângulo")
+
+// triangulo(ladoA, ladoB, ladoC)
+
+
+// 5.
+let comparadorDeNumeros = (num1, num2) =>{
+    
+    if(num1 > num2){
+        console.log(`O maior é: ${num1}`)
     }
-    else if (ladoA === ladoB || ladoB === ladoC || ladoC === ladoA) {
-        alert("Triângulo Isósceles")
+    else if(num2 > num1){
+        console.log(`O maior é: ${num2}`)
     }
-    else if (ladoA !== ladoB && ladoB !== ladoC && ladoC !== ladoA) {
-        alert("Triângulo Escaleno")
+
+    if(num1 % num2 === 0){
+        console.log(`${num1} é divisivel por ${num2}`)
+    }else{
+        console.log(`${num1} não é divisivel por ${num2}`)
+    }
+
+    if(num2 % num1 === 0){
+        console.log(`${num2} é divisivel por ${num1}`)
+    }else{
+        console.log(`${num2} não é divisivel por ${num1}`)
+    }
+
+    let diferenca = num1 - num2
+
+    if(diferenca >= 0){
+        console.log(`A diferença entre eles é ${diferenca}`)
+    }else{
+        diferenca *= -1
+        console.log(`A diferença entre eles é ${diferenca}`)
     }
 }
 
-alert("Digite os lados para saber que tipo é o triângulo:")
+let primeiroNumero = Number(prompt("Digite o primeiro número"))
+let segundoNumero = Number(prompt("Digite o segundo número"))
 
-let ladoA = prompt("Digite o primeiro lado do triângulo")
-let ladoB = prompt("Digite o segundo lado do triângulo")
-let ladoC = prompt("Digite o terceiro lado do triângulo")
+comparadorDeNumeros(primeiroNumero, segundoNumero)
 
-triangulo(ladoA, ladoB, ladoC)
