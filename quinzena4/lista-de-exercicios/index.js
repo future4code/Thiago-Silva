@@ -54,11 +54,33 @@
 // 3. Não funciona, a variável deve ser um let, para pegar os vários número, não será um número único
 // o while está fazendo uma comparação enter 0 e nenhum valor definido
 // se while conseguisse executar o cosole daria 0 somente
-let quantidadeDeNumerosPares = Number(prompt("escreva um número"))
-let i = 0
-while(quantidadeDeNumerosPares > 0) {
-    console.log(i*2)
-    i++
-    quantidadeDeNumerosPares--
-   
+// let quantidadeDeNumerosPares = Number(prompt("escreva um número"))
+// let i = 0
+// while(quantidadeDeNumerosPares > 0) {
+//     console.log(i*2)
+//     i++
+//     quantidadeDeNumerosPares--
+
+// }
+
+
+// 4.
+let triangulo = (ladoA, ladoB, ladoC) => {
+    if (ladoA === ladoB && ladoB === ladoC) {
+        alert("Triângulo Equilátero")
+    }
+    else if (ladoA === ladoB || ladoB === ladoC || ladoC === ladoA) {
+        alert("Triângulo Isósceles")
+    }
+    else if (ladoA !== ladoB && ladoB !== ladoC && ladoC !== ladoA) {
+        alert("Triângulo Escaleno")
+    }
 }
+
+alert("Digite os lados para saber que tipo é o triângulo:")
+
+let ladoA = prompt("Digite o primeiro lado do triângulo")
+let ladoB = prompt("Digite o segundo lado do triângulo")
+let ladoC = prompt("Digite o terceiro lado do triângulo")
+
+triangulo(ladoA, ladoB, ladoC)
