@@ -130,25 +130,36 @@
 
 //  ---  Exercícios de FUNÇÕES  ---
 // 1.
-// const array = [50, 30, 20, 10, 33, 27, 73, 100, 1920, 7000]
+const array = [50, 30, 20, 10, 33, 27, 73, 100, 1920, 7000]
 
-// let numerosExtremos = (array) => {
-//     let maiorNumero = 0
-//     let menorNumero = Infinity
-//     array.forEach((num) => {
-//         if(num > maiorNumero){
-//             maiorNumero = num
-//         }
-//         else if(num < menorNumero){
-//             menorNumero = num
-//         }
-//     })
-//     imprimirNumeros = document.getElementById("numerosExtremos")
+let numerosExtremos = (array) => {
+    let maiorNumero = 0
+	let menorNumero = Infinity
+    array.forEach((num) => {
+        if(num > maiorNumero){
+            maiorNumero = num
+        }
+        else if(num < menorNumero){
+            menorNumero = num
+        }
+	})
+	let segundoMaiorNumero = 0
+	let segundoMenorNumero = Infinity
+	array.forEach((num)=>{
+		if(num > segundoMaiorNumero && num !== maiorNumero){
+			segundoMaiorNumero = num
+		}
+		else if(num < segundoMenorNumero && num !== menorNumero){
+			segundoMenorNumero = num
+		}
+	})
+    imprimirNumeros = document.getElementById("numerosExtremos")
 
-//     imprimirNumeros.innerHTML += `O maior número é ${maiorNumero} e o menor número é ${menorNumero}`
-// }
+	imprimirNumeros.innerHTML += `O maior número é ${segundoMaiorNumero} e o menor número é ${segundoMenorNumero}`
+	
+}
 
-// // numerosExtremos(array)
+numerosExtremos(array)
 
 // // 2.
 // const mensagem = () => {
@@ -344,19 +355,19 @@
 
 
 // 5.
-const contas = [
-	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
-	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
-	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
-	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
-	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
-	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
-]
+// const contas = [
+// 	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+// 	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+// 	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+// 	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+// 	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+// 	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
+// ]
 
-contas.forEach((saldo)=>{
-    saldo.compras.forEach((valor)=>{
-        saldo.saldoTotal -= valor
-    })
-})
+// contas.forEach((saldo)=>{
+//     saldo.compras.forEach((valor)=>{
+//         saldo.saldoTotal -= valor
+//     })
+// })
 
-console.log(contas)
+// console.log(contas)
