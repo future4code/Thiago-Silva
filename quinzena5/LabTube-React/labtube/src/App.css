@@ -2,6 +2,8 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+  background-color: rgb(48, 48, 48);
+  color:azure;
 }
 
 
@@ -23,6 +25,20 @@ header {
 main {
   min-height: 80%;
   display: flex;
+}
+
+#logo{
+  width: 50px;
+  border-radius: 50%;
+}
+
+#lupa{
+  width:30px;
+  background-color: gray;
+}
+
+#campoDeBusca{
+  padding: 10px;
 }
 
 .menu-vertical {
@@ -93,6 +109,7 @@ main {
   border-width: thin; 
   align-items: start;
   justify-items: stretch;
+  border-style: none;
 }
 
 
@@ -113,4 +130,3 @@ footer {
 h4 {
   margin-left: 20px;
 }
-
