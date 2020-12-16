@@ -12,68 +12,74 @@ function App() {
   return (
     <div className="App">
       <div className="tela-inteira">
-        
+
         <header>
-          <img src={logo} id="logo"/>
+          <img src={logo} id="logo" />
           <h1>Lab Tube</h1>
           <span><input type="text" placeholder="Busca" id="campoDeBusca" />
-          <img src={lupa} id="lupa"/></span>
+            <img src={lupa} id="lupa" /></span>
         </header>
 
         <main>
+         <div>
+        <input id="menu_hamburguer" className="input_de_checagem" type="checkbox" />
+        <label htmlFor="menu_hamburguer">
+          <nav className="menu_mobile">
+            <span className="hamburguer"></span>
+          </nav>
+        </label>
 
-            <nav className="menu-vertical">
-              <ul>
-                <li className="botoes-meunu-vertical">Início</li>
-                <li className="botoes-meunu-vertical">Em alta</li>
-                <li className="botoes-meunu-vertical">Inscrições</li>
-                <hr />
-                <li className="botoes-meunu-vertical">Originais</li>
-                <li className="botoes-meunu-vertical">Histórico</li>
-              </ul>
-            </nav>
+        <ul id="lista_menu_mobile">
+          <li className="botoes-meunu-vertical">Início</li>
+          <li className="botoes-meunu-vertical">Em alta</li>
+          <li className="botoes-meunu-vertical">Inscrições</li>
+          <hr />
+          <li className="botoes-meunu-vertical">Originais</li>
+          <li className="botoes-meunu-vertical">Histórico</li>
+        </ul>
+        </div> 
 
-            <section className="painel-de-videos">
-              <div className="box-pagina-principal media1" onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=1 " alt="" />
-                <h4>{titulo}</h4>
-              </div>
-              <div className="box-pagina-principal media2" onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=2 " alt="" />
-                <h4>{titulo}</h4>
-              </div>
-              <div className="box-pagina-principal media3" onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=3 " alt="" />
-                <h4>{titulo}</h4>
-              </div>
-              <div className="box-pagina-principal media4" onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=4 " alt="" />
-                <h4>{titulo}</h4>
-              </div>
-              <div className="box-pagina-principal media5" onclick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=5 " alt="" />
-                <h4>{titulo}</h4>
-              </div>
-              <div className="box-pagina-principal media6" onclick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=6 " alt="" />
-                <h4>{titulo}</h4>
-              </div>
-              <div className="box-pagina-principal media7" onclick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=7 " alt="" />
-                <h4>{titulo}</h4>
-              </div>
-              <div className="box-pagina-principal media8" onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=8 " alt="" />
-                <h4>{titulo}</h4>
-              </div>
-            </section>
+          <section className="painel-de-videos">
+            <div className="box-pagina-principal media1" onClick={reproduzVideo}>
+              <img src="https://picsum.photos/400/400?a=1 " alt="" />
+              <h4>{titulo}</h4>
+            </div>
+            <div className="box-pagina-principal media2" onClick={reproduzVideo}>
+              <img src="https://picsum.photos/400/400?a=2 " alt="" />
+              <h4>{titulo}</h4>
+            </div>
+            <div className="box-pagina-principal media3" onClick={reproduzVideo}>
+              <img src="https://picsum.photos/400/400?a=3 " alt="" />
+              <h4>{titulo}</h4>
+            </div>
+            <div className="box-pagina-principal media4" onClick={reproduzVideo}>
+              <img src="https://picsum.photos/400/400?a=4 " alt="" />
+              <h4>{titulo}</h4>
+            </div>
+            <div className="box-pagina-principal media5" onclick={reproduzVideo}>
+              <img src="https://picsum.photos/400/400?a=5 " alt="" />
+              <h4>{titulo}</h4>
+            </div>
+            <div className="box-pagina-principal media6" onclick={reproduzVideo}>
+              <img src="https://picsum.photos/400/400?a=6 " alt="" />
+              <h4>{titulo}</h4>
+            </div>
+            <div className="box-pagina-principal media7" onclick={reproduzVideo}>
+              <img src="https://picsum.photos/400/400?a=7 " alt="" />
+              <h4>{titulo}</h4>
+            </div>
+            <div className="box-pagina-principal media8" onClick={reproduzVideo}>
+              <img src="https://picsum.photos/400/400?a=8 " alt="" />
+              <h4>{titulo}</h4>
+            </div>
+          </section>
         </main>
 
-          <footer>
-            <h4>Oi! Eu moro no footer!</h4>
-          </footer>
+        <footer>
+          <h4>Oi! Eu moro no footer!</h4>
+        </footer>
       </div>
-      </div>
+    </div>
   );
 }
 
