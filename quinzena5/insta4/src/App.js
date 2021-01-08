@@ -1,10 +1,37 @@
 import React from 'react';
-import './App.css';
+import styled from 'styled-components';
 import Post from './components/Post/Post';
 import ele from './img/ol.png'
 import deathnote from './img/death-note.jpg'
 import akame from './img/akame_perfil.png'
 import akamePost from './img/akame.png'
+
+const Fundo = styled.body`
+  background-color: #e5e5e5;
+  
+`
+
+const AppContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+`
+
+const FormPostagens = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding:20px;
+  button{
+    margin: 5px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    font-family: cursive;
+  }
+`
 
 
 class App extends React.Component {
@@ -25,7 +52,11 @@ class App extends React.Component {
         fotoUsuario:"https://picsum.photos/50/50",
         fotoPost:"https://picsum.photos/200/150"
       }
-    ]
+    ],
+
+    valorInputPessoa: "",
+    valorInputFoto: "",
+    valorInputFotoPost: ""
   }
 
   adicionaUsuario = () => {
@@ -63,34 +94,27 @@ class App extends React.Component {
     })
 
     return (
-      <div>
-     <div>
+      <Fundo>
+     <FormPostagens>
           <input
-            // Mesma lógica do exemplo anterior
             value={this.state.valorInputPessoa}
-            // Repare na função que é passada aqui no onChange
             onChange={this.onChangeInputPessoa}
             placeholder={"Nome"}
           />
           <input
-            // Diferente do input acima, a variável de estado aqui é outra
             value={this.state.valorInputFoto}
-            // E a função também é outra
             onChange={this.onChangeInputFoto}
             placeholder={"Foto"}
           />
           <input
-            // Diferente do input acima, a variável de estado aqui é outra
             value={this.state.valorInputFotoPost}
-            // E a função também é outra
             onChange={this.onChangeInputFotoPost}
-            placeholder={"FotoPost"}
+            placeholder={"Post"}
           />
           <button onClick={this.adicionaUsuario}>Postar</button>
-        </div>
-
-      <div className={'app-container'}>{postagens}</div>
-      </div>
+        </FormPostagens>
+          <AppContainer>{postagens}</AppContainer>
+      </Fundo>
     )
   }
 }
