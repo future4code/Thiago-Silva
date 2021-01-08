@@ -68,6 +68,7 @@ class App extends React.Component {
 
     const novoUsuarios = [...this.state.usuarios, novoUsuario];
     this.setState({ usuarios: novoUsuarios });
+    this.setState({ valorInputFoto: "", valorInputFotoPost: "", valorInputPessoa: ""})
   };
 
   onChangeInputPessoa = (event) => {
