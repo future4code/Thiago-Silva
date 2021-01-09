@@ -39,7 +39,7 @@ class App extends React.Component {
     usuarios: [
       {
         nomeUsuario:"Akame",
-        fotoUsuario: akame,
+        fotoUsuario: "./img/akame_perfil.png",
         fotoPost: akamePost
       },
       {
@@ -85,6 +85,9 @@ class App extends React.Component {
   
   render() {
     const postagens = this.state.usuarios.map((usuario) => {
+      console.log(usuario.nomeUsuario)
+      console.log(usuario.fotoUsuario)
+      console.log(usuario.fotoPost)
       return (
         <Post>
           {usuario.nomeUsuario}
@@ -96,24 +99,24 @@ class App extends React.Component {
 
     return (
       <Fundo>
-     <FormPostagens>
-          <input
-            value={this.state.valorInputPessoa}
-            onChange={this.onChangeInputPessoa}
-            placeholder={"Nome"}
-          />
-          <input
-            value={this.state.valorInputFoto}
-            onChange={this.onChangeInputFoto}
-            placeholder={"Foto"}
-          />
-          <input
-            value={this.state.valorInputFotoPost}
-            onChange={this.onChangeInputFotoPost}
-            placeholder={"Post"}
-          />
-          <button onClick={this.adicionaUsuario}>Postar</button>
-        </FormPostagens>
+        <FormPostagens>
+              <input
+                value={this.state.valorInputPessoa}
+                onChange={this.onChangeInputPessoa}
+                placeholder={"Nome"}
+              />
+              <input
+                value={this.state.valorInputFoto}
+                onChange={this.onChangeInputFoto}
+                placeholder={"Foto"}
+              />
+              <input
+                value={this.state.valorInputFotoPost}
+                onChange={this.onChangeInputFotoPost}
+                placeholder={"Post"}
+              />
+              <button onClick={this.adicionaUsuario}>Postar</button>
+          </FormPostagens>
           <AppContainer>{postagens}</AppContainer>
       </Fundo>
     )
