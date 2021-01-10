@@ -12,7 +12,7 @@ import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
 import {SecaoCompartilhar} from '../SecaoCompartilhar/SecaoCompartilhar'
 
 
-class Post extends React.Component {
+export class Post extends React.Component {
   state = {
     curtido: false,
     numeroCurtidas: 0,

@@ -39,7 +39,7 @@ class App extends React.Component {
     usuarios: [
       {
         nomeUsuario:"Akame",
-        fotoUsuario: "./img/akame_perfil.png",
+        fotoUsuario: akame,
         fotoPost: akamePost
       },
       {
@@ -61,14 +61,15 @@ class App extends React.Component {
 
   adicionaUsuario = () => {
     const novoUsuario = {
-      nome: this.state.valorInputPessoa,
-      foto: this.state.valorInputFoto,
+      nomeUsuario: this.state.valorInputPessoa,
+      fotoUsuario: this.state.valorInputFoto,
       fotoPost: this.state.valorInputFotoPost
     };
 
     const novoUsuarios = [...this.state.usuarios, novoUsuario];
+    console.log(novoUsuarios)
     this.setState({ usuarios: novoUsuarios });
-    this.setState({ valorInputFoto: "", valorInputFotoPost: "", valorInputPessoa: ""})
+    this.setState({ valorInputPessoa: "", valorInputFoto: "", valorInputFotoPost: ""})
   };
 
   onChangeInputPessoa = (event) => {
@@ -85,15 +86,11 @@ class App extends React.Component {
   
   render() {
     const postagens = this.state.usuarios.map((usuario) => {
-      console.log(usuario.nomeUsuario)
-      console.log(usuario.fotoUsuario)
-      console.log(usuario.fotoPost)
       return (
-        <Post>
-          {usuario.nomeUsuario}
-          {usuario.fotoUsuario}
-          {usuario.fotoPost}
-        </Post>
+        <Post
+          nomeUsuario = {usuario.nomeUsuario}
+          fotoUsuario = {usuario.fotoUsuario}
+          fotoPost = {usuario.fotoPost}/>
       )
     })
 
