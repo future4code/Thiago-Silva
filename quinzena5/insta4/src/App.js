@@ -61,14 +61,15 @@ class App extends React.Component {
 
   adicionaUsuario = () => {
     const novoUsuario = {
-      nome: this.state.valorInputPessoa,
-      foto: this.state.valorInputFoto,
+      nomeUsuario: this.state.valorInputPessoa,
+      fotoUsuario: this.state.valorInputFoto,
       fotoPost: this.state.valorInputFotoPost
     };
 
     const novoUsuarios = [...this.state.usuarios, novoUsuario];
+    console.log(novoUsuarios)
     this.setState({ usuarios: novoUsuarios });
-    this.setState({ valorInputFoto: "", valorInputFotoPost: "", valorInputPessoa: ""})
+    this.setState({ valorInputPessoa: "", valorInputFoto: "", valorInputFotoPost: ""})
   };
 
   onChangeInputPessoa = (event) => {
@@ -86,34 +87,33 @@ class App extends React.Component {
   render() {
     const postagens = this.state.usuarios.map((usuario) => {
       return (
-        <Post>
-          {usuario.nomeUsuario}
-          {usuario.fotoUsuario}
-          {usuario.fotoPost}
-        </Post>
+        <Post
+          nomeUsuario = {usuario.nomeUsuario}
+          fotoUsuario = {usuario.fotoUsuario}
+          fotoPost = {usuario.fotoPost}/>
       )
     })
 
     return (
       <Fundo>
-     <FormPostagens>
-          <input
-            value={this.state.valorInputPessoa}
-            onChange={this.onChangeInputPessoa}
-            placeholder={"Nome"}
-          />
-          <input
-            value={this.state.valorInputFoto}
-            onChange={this.onChangeInputFoto}
-            placeholder={"Foto"}
-          />
-          <input
-            value={this.state.valorInputFotoPost}
-            onChange={this.onChangeInputFotoPost}
-            placeholder={"Post"}
-          />
-          <button onClick={this.adicionaUsuario}>Postar</button>
-        </FormPostagens>
+        <FormPostagens>
+              <input
+                value={this.state.valorInputPessoa}
+                onChange={this.onChangeInputPessoa}
+                placeholder={"Nome"}
+              />
+              <input
+                value={this.state.valorInputFoto}
+                onChange={this.onChangeInputFoto}
+                placeholder={"Foto"}
+              />
+              <input
+                value={this.state.valorInputFotoPost}
+                onChange={this.onChangeInputFotoPost}
+                placeholder={"Post"}
+              />
+              <button onClick={this.adicionaUsuario}>Postar</button>
+          </FormPostagens>
           <AppContainer>{postagens}</AppContainer>
       </Fundo>
     )
