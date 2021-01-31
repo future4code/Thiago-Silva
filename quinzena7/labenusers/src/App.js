@@ -2,9 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 
-const body = styled.body`
-background-color:green;
-`
 
 const Principal = styled.div`
   color:blue;
