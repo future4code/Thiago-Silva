@@ -1,33 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import {BlocoNoticias, CardNoticia, ImgNoticia, Descricao} from './estilo'
 import { BASE_URL, axiosConfig } from "../constantes/requisicoes";
 import axios from 'axios'
-
-const BlocoNoticias = styled.div`
-  display:flex;
-  flex-direction:row;
-  flex-wrap: wrap;
-  margin-top:50px;
-  margin-left:10%;
-`
-
-const CardNoticia = styled.div`
-    margin:15px;
-    border:1px solid gray;
-    border-radius: 10%;
-    text-align:center;
-    width:300px;
-`
-const ImgNoticia = styled.img`
-  width: 200px;
-  height: 100px;
-  margin:5px;
-`
-
-const Descricao = styled.p`
-  text-align: center;
-  margin:10px;
-`
 
 class Noticias extends React.Component {
   state = {
@@ -58,14 +32,8 @@ class Noticias extends React.Component {
         </CardNoticia>
       )
     })
-    
-   
-      
-   
-        return(<BlocoNoticias>{listaNoticias}</BlocoNoticias>)
-         
-    
-     
+
+      return(<BlocoNoticias>{listaNoticias}</BlocoNoticias>)         
       
   }
 }

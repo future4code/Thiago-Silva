@@ -1,36 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
 import GlobalStyle from './estilo/global'
-import axios from 'axios'
+import {Cabecalho, Titulo, Menu, CorpoMenu, ItemMenu} from './estilo/estiloApp'
 import Noticias from './componentes/Noticias';
 
-// 437d10866fd544cc95c6db4c094a74b1
-
-const Cabecalho = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 3px black;
-`
-const Titulo = styled.h1`
-   color: #4A93F8;
-`
-
-const Menu = styled.div`
-  width:500px;
-  margin-left:30%;
-  color: blue;
-`
-const CorpoMenu = styled.ul`
-  margin:50px;
-  border:1px solid #EDEDED;
-  list-style:none;
-`
-const ItemMenu = styled.li`
-  display:inline;
-  margin-left:50px;
-`
 
 class App extends React.Component {
   render(){

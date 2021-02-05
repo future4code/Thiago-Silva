@@ -7,6 +7,4 @@ export default createGlobalStyle`
     background-color: #202124;
     color:#EDEDED;
   }
-
-  
 `
