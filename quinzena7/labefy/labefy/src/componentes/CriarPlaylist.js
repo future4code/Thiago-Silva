@@ -2,18 +2,8 @@ import React from  'react'
 import styled from 'styled-components'
 import {BASE_URL, axiosConfig} from '../constantes/requisicoes'
 import axios from 'axios'
+import {CriaNovaLista, BotaoCriar} from './estilos'
 
-const CriaNovaLista = styled.div`
-    margin:50px;
-`
-
-const BotaoCriar = styled.button`
-    background-color: #1793d1;
-    margin:20px;
-    border:none;
-    border-radius:5px;
-    padding:5px;
-`
 
 class CriarPlaylist extends React.Component{
     state = {

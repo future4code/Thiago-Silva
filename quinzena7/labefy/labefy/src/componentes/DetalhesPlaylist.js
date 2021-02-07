@@ -1,79 +1,49 @@
 import React from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
+import ReactAudioPlayer from 'react-audio-player'
 import {BASE_URL, axiosConfig} from '../constantes/requisicoes'
-
-const BlocoListagem = styled.div`
-    border: 3px solid black;
-    margin: 50px;
-`
-
-const Listagem = styled.div`
-    margin:40px;
-    padding: 10px;
-    border: 2px solid gray;
-`
+import {BlocoListagem, Listagem, BolinhaImg} from './estilos'
 
 class DetalhesPlaylist extends React.Component {
   state = {
-    playLists: [],
-    idPlaylist:""
+    musicas: [],
+    idPlaylist:"",
+    nomeplaylistEscolhida:""
   }
 
   componentDidMount() {
-    this.listaPlayLists()
-    this.setState({idPlaylist: this.props.id})
+    this.setState({idPlaylist: this.props.id, nomeplaylistEscolhida: this.props.nome})
+    this.listaMusicas()
   }
-
-  componentDidUpdate() {
-    this.listaPlayLists()
-  }
-
-  listaPlayLists = async () => {
-      try {
-        const resposta = await axios.get(`${BASE_URL}`, axiosConfig)
-        this.setState({playLists:resposta.data.result.list})
-      } catch (erro) {
-        alert(erro.message);
-      }
-    }
-
-    OnClickDelmusica = (id) => {
-        axios
-        .delete(`${BASE_URL}/${id}`, axiosConfig)
-        .then((resposta) => {
-            alert(`Playlist Deletada com sucesso!`)
-        })
-        .catch((erro) => {
-            alert("erro no cadastro")
-        })
-
-    }
-
-    listaPlayLists = async () => {
+    
+    listaMusicas = async () => {
         try {
-          const resposta = await axios.get(`${BASE_URL}`, axiosConfig)
-          this.setState({playLists:resposta.data.result.list})
+          const id = this.state.idPlaylist
+          const resposta = await axios.get(`${BASE_URL}/${id}/tracks`, axiosConfig)
+          this.setState({musicas:resposta.data.result.list})
         } catch (erro) {
           alert(erro.message);
         }
       }
 
   render(){
-    // const lista = this.state.playLists.map((play) =>{
-    //   return(
-    //       <div>
-    //           <p>{play.name}</p>
-    //           <button onClick={() => {this.OnClickDel(play.id)}}>X</button>
-    //       </div>
-    //   )
-    // })
+    const lista = this.state.musicas.map((play) =>{
+      return(
+        <Listagem>
+            <BolinhaImg alt="imagem" src="https://picsum.photos/100/100"/>
+            <p>{play.nome}</p>
+            <ReactAudioPlayer src={play.url} controls />
+        </Listagem>
+        
+      )
+    })
 
     return (
         <BlocoListagem>
             <Listagem>
-                <h1>{this.state.idPlaylist}</h1>
-                <p>Musicas</p>
+                <h1>{this.state.nomeplaylistEscolhida}</h1>
+                <p>{lista}</p>
             </Listagem>
         </BlocoListagem>
     )

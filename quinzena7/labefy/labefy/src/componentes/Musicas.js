@@ -4,44 +4,7 @@ import {BASE_URL, axiosConfig} from '../constantes/requisicoes'
 import axios from 'axios'
 import ReactAudioPlayer from 'react-audio-player'
 import { getAllByPlaceholderText } from '@testing-library/react'
-
-const BlocoListagem = styled.div`
-    border: 3px solid  #1793d1;
-    border-radius:70px;
-    margin: 10px 50px;
-`
-
-const Listagem = styled.div`
-    display:flex;
-    justify-content: column;
-    align-items: center;
-    justify-content: space-between;
-    margin:40px;
-    padding: 20px;
-    border: 2px solid gray;
-    border-radius:70px;
-`
-
-const EscolherPlaylist = styled.div`
-    display:flex;
-    justify-content: column;
-    align-items: center;
-    margin:20px 200px;
-    padding:10px;
-`
-
-const BolinhaImg = styled.img`
-    border-radius: 50%;
-`
-const BotaoAdicionar = styled.button`
-    padding:5px;
-    background-color: green;
-    color:white;
-    border-radius: 50px;
-    font-size: 30px;
-    border:none;
-    outline-style: none;
-`
+import {BlocoListagem, ListagemMusicas, EscolherPlaylist, BotaoAdicionar, BolinhaImg} from './estilos'
 
 class ListadeMusicas extends React.Component{
     state = {
@@ -138,19 +101,30 @@ class ListadeMusicas extends React.Component{
         OnClickAddMusica = (id) => {
             alert(`Identificação da música:${id}`)
             alert(`A playlista escolhida é ${this.state.playlistEscolhida}`)
-            // const body = {
-            //     name: this.state.inputNomeMusica,
-            //     artist: this.state.inputArtista,
-            //     url: this.state.inputUrl
-            // }
-            // axios
-            // .post(`${BASE_URL}/${id}/tracks`, body, axiosConfig)
-            // .then((resposta) => {
-            //     alert(`Musica adicionada a Playlist`)
-            // })
-            // .catch((erro) => {
-            //     alert("erro no cadastro")
-            // })
+            const idPlay = this.state.playlistEscolhida
+            let body = []
+            this.state.musicas.map((item) => {
+                if(item.id === id){
+                    alert(item.name)
+                    body = {
+                        name: item.name,
+                        artist: item.artist,
+                        url: item.url
+                    }
+                
+                }
+                return body
+            })
+            
+            
+            axios
+            .post(`${BASE_URL}/:${idPlay}/tracks`, body, axiosConfig)
+            .then((resposta) => {
+                alert(`Musica adicionada a Playlist`)
+            })
+            .catch((erro) => {
+                alert(erro.message)
+            })
     
         }
 
@@ -163,12 +137,12 @@ class ListadeMusicas extends React.Component{
 
         const lista = this.state.musicas.map((play) =>{
             return(
-                <Listagem>
+                <ListagemMusicas>
                     <BolinhaImg alt="imagem" src="https://picsum.photos/100/100"/>
                     <p>{play.nome}</p>
                     <ReactAudioPlayer src={play.url} controls />
                     <BotaoAdicionar onClick={() => {this.OnClickAddMusica(play.id)}}>+</BotaoAdicionar>
-                </Listagem>
+                </ListagemMusicas>
             )
         })
 
