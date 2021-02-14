@@ -4,10 +4,12 @@ import axios from 'axios'
 import { BASE_URL } from '../../constantes/requisicoes'
 
 import {Principal} from '../../styledApp'
-import {CardTotal, TamanhoImagem, ImagemCoracao, BotaoAprovar, BotaoReprovar} from './EstiloCard'
+import {CardTotal, TamanhoImagem, ImagemCoracao, BotaoAprovar, BotaoReprovar, ComCoracao} from './EstiloCard'
 
 import imagemCoracao from '../../img/coracao.jpg'
 import ImagemX from '../../img/reprovar1.jpg'
+import colecaoCoracoes from '../../img/colecao-de-coracao.png'
+import colecaoCoracoes2 from '../../img/colecao-de-coracao2.png'
 
 
 
@@ -52,7 +54,7 @@ function Card() {
             console.log(erro)
         })
 
-        // window.location.reload()
+        personalidades()
     }
 
     const reprovar = (idAtual) => {
@@ -69,8 +71,9 @@ function Card() {
             console.log(erro)
         })
 
-        // window.location.reload()
+        personalidades()
     }
+
 
 
   return (
@@ -84,7 +87,7 @@ function Card() {
         </CardTotal>
 
         <BotaoReprovar onClick={() => {reprovar(idM)}}>
-            <ImagemCoracao src={ImagemX} alt="coração"/>
+            <ImagemCoracao src={ImagemX} alt="reprovar"/>
         </BotaoReprovar>
 
         <div>

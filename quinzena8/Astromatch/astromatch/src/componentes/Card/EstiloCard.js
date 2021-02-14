@@ -14,6 +14,7 @@ export const TamanhoImagem = styled.img `
   height:300px;
   border-radius: 50px;
   border-bottom: 5px solid #BDBDBD;
+  z-index: 0;
 `  
 
 export const BotaoAprovar = styled.button`
@@ -34,4 +35,13 @@ export const BotaoReprovar = styled.button`
     position:absolute;
     right: 700px;
     top: 540px;
+`
+
+export const ComCoracao = styled.img`
+    position:absolute;
+    width:400px;
+    height:300px;
+    border-radius: 50px;
+    right:430px;
+    background-color: rgba(15,17,17,0)
 `
