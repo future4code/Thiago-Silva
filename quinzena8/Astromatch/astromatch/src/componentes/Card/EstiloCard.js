@@ -45,3 +45,7 @@ export const ComCoracao = styled.img`
     right:430px;
     background-color: rgba(15,17,17,0)
 `
+
+export const Mensagem = styled.p`
+    margin-top: 200px;
+`

@@ -4,13 +4,10 @@ import axios from 'axios'
 import { BASE_URL } from '../../constantes/requisicoes'
 
 import {Principal} from '../../styledApp'
-import {CardTotal, TamanhoImagem, ImagemCoracao, BotaoAprovar, BotaoReprovar, ComCoracao} from './EstiloCard'
+import {CardTotal, TamanhoImagem, ImagemCoracao, BotaoAprovar, BotaoReprovar, Mensagem} from './EstiloCard'
 
 import imagemCoracao from '../../img/coracao.jpg'
 import ImagemX from '../../img/reprovar1.jpg'
-import colecaoCoracoes from '../../img/colecao-de-coracao.png'
-import colecaoCoracoes2 from '../../img/colecao-de-coracao2.png'
-
 
 
 function Card() {
@@ -75,16 +72,21 @@ function Card() {
     }
 
 
-
   return (
     <Principal>
-        
+        {nome ?
         <CardTotal>
             <TamanhoImagem src={foto} alt="foto"/>
             <p>{nome}</p>
             <p>Idade: {idade}</p>
-            <p>Descrição: {descricao}</p>
-        </CardTotal>
+            <p>Descrição: {descricao}</p> 
+        </CardTotal>:
+         
+         <CardTotal>
+             <Mensagem>
+             A lista gerada para você acabou, veja ao lado as personalidades que você deu match
+             </Mensagem>
+        </CardTotal>}
 
         <BotaoReprovar onClick={() => {reprovar(idM)}}>
             <ImagemCoracao src={ImagemX} alt="reprovar"/>
