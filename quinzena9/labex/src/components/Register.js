@@ -1,21 +1,10 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import styled from 'styled-components'
 
 import { BASE_URL } from '../requests/Request'
 
-const RegisterContainer = styled.div`
-  border-radius: 50px;
-  background-color: white;
-  width: 250px;
-  height: 200px;
-  margin: 50px 10px;
-`
+import {RegisterContainer, ContainerInputs} from '../styles/RegisterStyle'
 
-const ContainerInputs = styled.div`
-  text-align: center;
-  margin-top: 20px;
-`
 
 export default function Register() {
     const [inputEmail, setInputEmail] = useState("")
