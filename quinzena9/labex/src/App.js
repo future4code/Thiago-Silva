@@ -1,46 +1,57 @@
 import React from 'react'
-import styled from 'styled-components'
+import { BrowserRouter, Route, Switch} from 'react-router-dom'
 import axios from 'axios'
 
-import ListTravels from './components/ListTravels'
-import Register from './components/Register'
-import LoginWindow from './components/LoginWindow'
+import CadidateList from './pages/CandidateList'
+import CreateNewTravel from './pages/CreateNewTravel'
+import { DetailsTravel } from './pages/DetailsTravel'
+import Home from './pages/Home'
+import ListTravels from './pages/ListTravels'
+import LoginWindow from './pages/LoginWindow'
+import Register from './pages/Register'
+import Subscription from './pages/Subscription'
 
 import './styles/style.css'
-import {
-        Title, 
-        Header, 
-        Login, 
-        ImageLogin, 
-        Search, 
-        ContainerTravels 
-}from './styles/AppStyle'
+import {Container} from './styles/HomeStyle'
 
-import astronauta from './img/astronauta.gif'
-
-
-function App() {
+export default function App() {
+    
   return (
     <div>
 
-      <Title>
-        LabeX
-      </Title>
-      
-      <Header>
-      <Search><input type="text"/></Search>
-      <Login><ImageLogin src={astronauta}/></Login>
-      </Header>
+      <Home/>
+      <Container>
+      <BrowserRouter>
+          <Switch>
 
-      <ContainerTravels>
-        {/* <ListTravels/>
-        <ListTravels/>
-        <ListTravels/> */}
-        <Register/>
-        <LoginWindow/>
-      </ContainerTravels>
+            <Route exact path="/">
+              <ListTravels />
+            </Route>
+
+            <Route exact path="/viagens">
+              <DetailsTravel />
+            </Route>
+
+            <Route exact path="/cadastro">
+              <Subscription />
+            </Route>
+
+            <Route exact path="/login">
+              <LoginWindow />
+              <Register />
+            </Route>
+
+            <Route exact path="/criar-nova-viagem">
+              <CreateNewTravel />
+            </Route>
+
+            <Route exact path="/lista-cadidatos">
+              <CadidateList />
+            </Route>
+
+          </Switch>
+      </BrowserRouter>
+      </Container>
     </div>
   );
 }
-
-export default App;
