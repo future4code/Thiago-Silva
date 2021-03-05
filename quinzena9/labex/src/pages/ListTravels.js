@@ -1,93 +1,65 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import {BASE_URL} from '../requests/Request'
 import { useHistory } from 'react-router-dom'
+import {goToTravel, goToRegister, goToLoginWindow} from '../routes/Coordinator'
 
 import {Travels, Display, Container, Login, ImageLogin} from '../styles/ListTravelsStyle'
 
 import astronauta from '../img/astronauta.gif'
 
 export default function ListTravels() {
+  const [listTravel, setListTravel] = useState([])
+
   const history = useHistory()
 
-  const goToRegister = () => {
-    history.push("/cadastro")
+  const viagens = () => {
+    axios.get(`${BASE_URL}trips`)
+    .then((resposta) => {
+      setListTravel(resposta.data.trips)
+    })
+    .catch((erro) => {
+      console.log(erro)
+    })
   }
+  
+  
 
-  const goToCreateTravel = () => {
-    history.push("/criar-nova-viagem")
-  }
+  useEffect(() => {
+    viagens()
+  },[])
 
-  const goToCandidates = () => {
-    history.push("/lista-cadidatos")
-  }
-
-  const goToDetailsTravel = () => {
-    history.push("/viagens")
-  }
-
-  const goToLoginWindow = () => {
-    history.push("/login")
-}
-
-    return(
+  return(
+    <div>
       <div>
+        <button onClick={() => goToTravel(history, "criar")}>Criar Nova Viagem</button>
         <div>
-        <button onClick={goToCreateTravel}>Criar Nova Viagem</button>
-        <div>
-          <button onClick={goToDetailsTravel}>Destalhes Viagens</button>
-          <button onClick={goToCandidates}>Lista de Candidatos</button>
+          <button onClick={() => goToTravel(history, "detalhes")}>Destalhes Viagens</button>
+          <button onClick={() => goToTravel(history, "lista")}>Lista de Candidatos</button>
         </div>
-        </div>
-        <Login onClick={goToLoginWindow}><ImageLogin src={astronauta}/></Login>
+      </div>
+        <Login onClick={() => goToLoginWindow(history)}><ImageLogin src={astronauta}/></Login>
         <Container>
-        <Travels>
-        <h1>Viagem 1</h1>
-        <Display>
-          <div><img src='https://picsum.photos/110/250' /></div>
-          <div>
-            <h3>Planeta:</h3>
-            <p>Plutão</p>
-            <h3>Descrição:</h3>
-            <p>Único tour que fazemos em planeta anão no sistema solar! Levem casacos que a previsão é de −230 °C</p>
-            <p>Duração: 980</p>
-            <p>Data: 21/12/2021</p>
-          </div>
-        </Display>
-        
-        <button onClick={goToRegister}>Inscrever-se</button>
-        </Travels>
-        <Travels>
-        <h1>Viagem 1</h1>
-        <Display>
-          <div><img src='https://picsum.photos/110/250' /></div>
-          <div>
-            <h3>Planeta:</h3>
-            <p>Plutão</p>
-            <h3>Descrição:</h3>
-            <p>Único tour que fazemos em planeta anão no sistema solar! Levem casacos que a previsão é de −230 °C</p>
-            <p>Duração: 980</p>
-            <p>Data: 21/12/2021</p>
-          </div>
-        </Display>
-        
-        <button onClick={goToRegister}>Inscrever-se</button>
-        </Travels>
-        <Travels>
-        <h1>Viagem 1</h1>
-        <Display>
-          <div><img src='https://picsum.photos/110/250' /></div>
-          <div>
-            <h3>Planeta:</h3>
-            <p>Plutão</p>
-            <h3>Descrição:</h3>
-            <p>Único tour que fazemos em planeta anão no sistema solar! Levem casacos que a previsão é de −230 °C</p>
-            <p>Duração: 980</p>
-            <p>Data: 21/12/2021</p>
-          </div>
-        </Display>
-        
-        <button onClick={goToRegister}>Inscrever-se</button>
-        </Travels>
+          {listTravel.map((travel) =>{
+              return (
+                <Travels>
+                  <h3>{travel.name}</h3>
+                  <Display>
+                  <div><img src='https://picsum.photos/110/250' /></div>
+                  <div>
+                    <h4>Planeta</h4>
+                    <p>{travel.planet}</p>
+                    <h4>Descrição:</h4>
+                    <p>{travel.description}</p>
+                    <p>Duração: {travel.durationInDays}</p>
+                    <p>Data: {travel.date}</p>
+                  </div>
+                  </Display>
+                  <button onClick={() => goToRegister(history)}>Inscrever-se</button>
+                </Travels>
+              )
+          })}
         </Container>
       </div>
-    )
+  )
 }

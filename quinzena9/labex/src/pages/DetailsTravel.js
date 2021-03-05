@@ -4,12 +4,12 @@ import { useHistory } from "react-router-dom"
 export function DetailsTravel() {
     const history = useHistory()
 
-    const goToHome = () => {
-        history.push("/")
+    const goBack = () => {
+        history.goBack()
     }
     return (
         <div>
-            <button onClick={goToHome}>voltar para home</button>
+            <button onClick={goBack}>voltar para home</button>
             Detalhes da Viagem
         </div>
     )

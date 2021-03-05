@@ -6,12 +6,12 @@ import {RegisterContainer, ContainerInputs} from '../styles/CreateNewTravelStyle
 export default function CreateNewTravel () {
     const history = useHistory()
 
-    const goToHome = () => {
-      history.push("/")
+    const goBack = () => {
+      history.goBack()
     }
     return(
         <RegisterContainer>
-            <button onClick={goToHome}>Voltar a home</button>
+            <button onClick={goBack}>Voltar a home</button>
             <h1>Criar Nova Viagem</h1>
             <ContainerInputs>
               <input type="text" placeholder="Nome"/>

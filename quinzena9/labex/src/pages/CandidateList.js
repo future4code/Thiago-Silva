@@ -6,13 +6,13 @@ import {RegisterContainer, ContainerInputs} from '../styles/CandidateListStyle'
 export default function CandidateList () {
   const history = useHistory()
 
-  const goToHome = () => {
-      history.push("/")
+  const goBack = () => {
+      history.goBack()
   }
   return(
     <RegisterContainer>
 
-      <button onClick={goToHome}>voltar a home</button>
+      <button onClick={goBack}>voltar a home</button>
 
       <h1>Lista de Candidatos</h1>
 

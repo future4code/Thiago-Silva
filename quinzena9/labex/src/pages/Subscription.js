@@ -18,12 +18,12 @@ const ContainerInputs = styled.div`
 export default function Subscription() {
     const history = useHistory()
 
-    const goToHome = () => {
-      history.push("/")
+    const goBack = () => {
+      history.goBack()
     }
     return(
         <RegisterContainer>
-            <button onClick={goToHome}>voltar para a home</button>
+            <button onClick={goBack}>voltar para a home</button>
             <h1>Inscrever</h1>
             <ContainerInputs>
               <input type="text" placeholder="Nome"/>

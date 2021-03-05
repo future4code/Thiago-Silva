@@ -13,8 +13,8 @@ export default function Register() {
 
     const history = useHistory()
 
-    const goToHome = () => {
-        history.push("/")
+    const goBack = () => {
+        history.goBack()
     }
 
     const onChangeEmail = (event) => {
@@ -46,7 +46,7 @@ export default function Register() {
 
     return(
         <div>
-            <button onClick={goToHome}>Retornar a home</button>
+            <button onClick={goBack}>Retornar a home</button>
             <RegisterContainer>
                 
                 <h1>Cadastrar</h1>
