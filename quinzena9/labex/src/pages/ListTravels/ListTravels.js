@@ -1,34 +1,36 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import {BASE_URL} from '../requests/Request'
+import { BASE_URL, pontosParaViagens } from '../../constants/Request'
 import { useHistory } from 'react-router-dom'
-import {goToTravel, goToRegister, goToLoginWindow} from '../routes/Coordinator'
+import { goToTravel, goToRegister, replaceToLogin } from '../../routes/Coordinator'
 
-import {Travels, Display, Container, Login, ImageLogin} from '../styles/ListTravelsStyle'
+import { Travels, Display, Container, Login, ImageLogin } from './ListTravelsStyle'
 
-import astronauta from '../img/astronauta.gif'
+import astronauta from '../../img/astronauta.gif'
+import useProtectedPage from '../../hooks/useProtectedPage'
 
 export default function ListTravels() {
   const [listTravel, setListTravel] = useState([])
-
   const history = useHistory()
+  useProtectedPage()
 
-  const viagens = () => {
-    axios.get(`${BASE_URL}trips`)
+  useEffect(() => {
+    const token = localStorage.getItem("token")
+  
+    axios
+    .get(`${BASE_URL + pontosParaViagens}trips`, {
+        headers: {
+          Authorizathion: token
+        }
+    })
     .then((resposta) => {
       setListTravel(resposta.data.trips)
     })
     .catch((erro) => {
       console.log(erro)
     })
-  }
-  
-  
-
-  useEffect(() => {
-    viagens()
   },[])
-
+  
   return(
     <div>
       <div>
@@ -38,7 +40,7 @@ export default function ListTravels() {
           <button onClick={() => goToTravel(history, "lista")}>Lista de Candidatos</button>
         </div>
       </div>
-        <Login onClick={() => goToLoginWindow(history)}><ImageLogin src={astronauta}/></Login>
+        <Login onClick={() => replaceToLogin(history)}><ImageLogin src={astronauta}/></Login>
         <Container>
           {listTravel.map((travel) =>{
               return (

@@ -1,14 +1,19 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 
-import {RegisterContainer, ContainerInputs} from '../styles/CandidateListStyle'
+import {RegisterContainer, ContainerInputs} from './CandidateListStyle'
+
+import useProtectedPage from '../../hooks/useProtectedPage'
 
 export default function CandidateList () {
+  useProtectedPage()
+  
   const history = useHistory()
 
   const goBack = () => {
       history.goBack()
   }
+
   return(
     <RegisterContainer>
 

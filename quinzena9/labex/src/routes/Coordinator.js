@@ -8,10 +8,14 @@ export const goToTravel = (history, setores) => {
     }
 }
 
+export const goToListTrip = (history) => {
+  history.push("/viagens")
+}
+
 export const goToRegister = (history) => {
     history.push("/cadastro")
 }
 
-export const goToLoginWindow = (history) => {
-    history.push("/login")
+export const replaceToLogin = (history) => {
+    history.replace("/login")
 }

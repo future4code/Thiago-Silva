@@ -26,8 +26,6 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 flex-wrap: wrap;
-
 width:900px;
-
 margin-left: 150px;
 `

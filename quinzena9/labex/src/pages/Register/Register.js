@@ -2,9 +2,11 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
-import { BASE_URL } from '../requests/Request'
+import { BASE_URL } from '../../constants/Request'
 
-import {RegisterContainer, ContainerInputs} from '../styles/RegisterStyle'
+import {RegisterContainer, ContainerInputs} from './RegisterStyle'
+
+import useProtectedPage from '../../hooks/useProtectedPage'
 
 
 export default function Register() {
@@ -43,6 +45,8 @@ export default function Register() {
             alert("erro no cadastro")
         })
     } 
+
+    useProtectedPage()
 
     return(
         <div>
