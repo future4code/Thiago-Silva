@@ -12,6 +12,7 @@ const useProtectedPage = () => {
         if (!token) {
           replaceToLogin(history)
         }
+        
       }, [history])
     
 }

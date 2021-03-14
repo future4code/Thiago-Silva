@@ -1,35 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
-import styled from 'styled-components'
-
 import { BASE_URL, aluno } from '../../constants/Request'
 import { useHistory } from 'react-router-dom'
 import astronauta from '../../img/astronauta.gif'
-
-import { goToListTrip } from '../../routes/Coordinator'
-
 import { ImageLogin } from '../ListTravels/ListTravelsStyle'
-
-const LoginContainer = styled.div`
-  border-radius: 50px;
-  width: 300px;
-  height: 200px;
-  margin: 0px 10px;
-`
-
-const ContainerInputs = styled.div`
-  text-align: center;
-  margin-top: 20px;
-`
-
-const LoginButton = styled.button`
-  margin-top: 20px;
-`
+import { goToListTrip } from '../../routes/Coordinator'
+import { LoginContainer, ContainerInputs, LoginButton, ContainerLoader, Loader} from './LoginStyle'
 
 export default function LoginWindow() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [loaderOn, setLoaderOn] = useState(false)
 
   const history = useHistory()
 
@@ -42,10 +23,20 @@ export default function LoginWindow() {
       .post(`${BASE_URL + aluno}login`, body)
       .then((resposta) => {
         localStorage.setItem("token", resposta.data.token)
+        goToListTrip(history, 'viagens')
       })
       .catch((erro) => {
         console.log(erro)
       })
+
+     const token = localStorage.getItem("token")
+     setLoaderOn(true)
+      do{
+        if(token){
+          goToListTrip(history, 'viagens')
+        }
+      }while(token)
+     
 
   }
 
@@ -54,6 +45,7 @@ export default function LoginWindow() {
     if (token) {
       goToListTrip(history, 'viagens')
     }
+    
   }, [history])
 
   const onChangeEmail = (event) => {
@@ -83,6 +75,8 @@ export default function LoginWindow() {
         />
       </ContainerInputs>
       <LoginButton onClick={logar}>Login</LoginButton>
+      <div></div>
+      {loaderOn && <ContainerLoader><Loader></Loader></ContainerLoader>}
     </LoginContainer>
   )
 }

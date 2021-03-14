@@ -7,7 +7,8 @@ import { goToListTrip } from '../../routes/Coordinator'
 import {
     Title,
     Header,
-    Search
+    Search,
+    BorderSearch
 } from './HomeStyle'
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
             goToListTrip(history, 'viagens')
         }
     }, [history])
+    
     return (
         <div>
 
@@ -27,7 +29,9 @@ export default function Home() {
             </Title>
 
             <Header>
-                <Search><input type="text" placeholder="Pesquisar" /></Search>
+                <Search>
+                    <BorderSearch type="text" placeholder="Pesquisar" />
+                </Search>
             </Header>
 
         </div>

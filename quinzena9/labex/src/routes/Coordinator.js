@@ -1,10 +1,35 @@
+
 export const goToTravel = (history, setores) => {
     if (setores === "lista") {
-      history.push("/viagens/lista");
+
+      const token = localStorage.getItem("token")
+      var payload = token.split(".")[1]
+      var testeUsuario = ((JSON.parse(window.atob(payload))).email)
+
+      if(testeUsuario === "revisor@labex.com"){
+        history.push("/viagens/lista");
+      }else{
+        alert("Somente o Revisor pode acessar esta área")
+        history.push("/viagens");
+      }
+
     } else if (setores === "criar") {
-      history.push("/viagens/criar");
+      
+      const token = localStorage.getItem("token")
+      var payload = token.split(".")[1]
+      var testeUsuario = ((JSON.parse(window.atob(payload))).email)
+
+      if(testeUsuario === "adm@labex.com"){
+        history.push("/viagens/criar");
+      }else{
+        alert("Somente o Administrador pode acessar esta área")
+        history.push("viagens")
+      }
+
     } else if (setores === "detalhes"){
       history.push("/viagens/detalhes")
+    } else if (setores === "revisor"){
+      history.push("/viagens/revisor")
     }
 }
 

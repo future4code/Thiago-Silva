@@ -10,6 +10,7 @@ import Register from '../pages/Register/Register'
 import Subscription from '../pages/Subscription/Subscription'
 import ErrorPage from '../pages/ErrorPage/ErrorPage'
 import Home from '../pages/Home/Home'
+import ListReviewer from '../pages/ListReviewer/ListReviewer'
 
 import '../styles/style.css'
 import {Container} from '../pages/Home/HomeStyle'
@@ -51,6 +52,10 @@ export default function Router() {
 
             <Route exact path="/viagens/lista">
               <CadidateList />
+            </Route>
+
+            <Route exact path="/viagens/revisor">
+              <ListReviewer />
             </Route>
 
             <Route exact path="/erro">

@@ -20,6 +20,10 @@ width:200px;
 height:20px;
 `
 
+export const BorderSearch = styled.input`
+border-radius: 10px;
+`
+
 export const Container = styled.div`
 display:flex;
 flex-direction: row;

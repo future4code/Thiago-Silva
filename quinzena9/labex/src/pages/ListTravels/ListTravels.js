@@ -1,63 +1,52 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import { BASE_URL, pontosParaViagens } from '../../constants/Request'
 import { useHistory } from 'react-router-dom'
-import { goToTravel, goToRegister, replaceToLogin } from '../../routes/Coordinator'
+import { goToTravel, replaceToLogin } from '../../routes/Coordinator'
 
-import { Travels, Display, Container, Login, ImageLogin } from './ListTravelsStyle'
+import { Travels, Container, ImgTravel, Login, ImageLogin, BotaoSair } from './ListTravelsStyle'
 
 import astronauta from '../../img/astronauta.gif'
 import useProtectedPage from '../../hooks/useProtectedPage'
+import useTravelData from '../../hooks/useTravelData'
+
 
 export default function ListTravels() {
-  const [listTravel, setListTravel] = useState([])
+  const travels = useTravelData()
   const history = useHistory()
   useProtectedPage()
+  
+  const deslogar = () => {
+    localStorage.removeItem("token")
+    replaceToLogin(history)
+  }
+
+  const details = (id) => {
+    localStorage.setItem("idTravel", id)
+    goToTravel(history, "detalhes")
+  }
 
   useEffect(() => {
-    const token = localStorage.getItem("token")
-  
-    axios
-    .get(`${BASE_URL + pontosParaViagens}trips`, {
-        headers: {
-          Authorizathion: token
-        }
-    })
-    .then((resposta) => {
-      setListTravel(resposta.data.trips)
-    })
-    .catch((erro) => {
-      console.log(erro)
-    })
+    
   },[])
   
   return(
     <div>
+      <BotaoSair onClick={deslogar}>Sair</BotaoSair>
       <div>
         <button onClick={() => goToTravel(history, "criar")}>Criar Nova Viagem</button>
-        <div>
-          <button onClick={() => goToTravel(history, "detalhes")}>Destalhes Viagens</button>
-          <button onClick={() => goToTravel(history, "lista")}>Lista de Candidatos</button>
-        </div>
+        <button onClick={() => goToTravel(history, "revisor")}>Lista de Candidatos</button>
       </div>
         <Login onClick={() => replaceToLogin(history)}><ImageLogin src={astronauta}/></Login>
         <Container>
-          {listTravel.map((travel) =>{
+          {travels.map((travel) =>{
+              
               return (
                 <Travels>
                   <h3>{travel.name}</h3>
-                  <Display>
-                  <div><img src='https://picsum.photos/110/250' /></div>
-                  <div>
-                    <h4>Planeta</h4>
-                    <p>{travel.planet}</p>
-                    <h4>Descrição:</h4>
-                    <p>{travel.description}</p>
-                    <p>Duração: {travel.durationInDays}</p>
-                    <p>Data: {travel.date}</p>
-                  </div>
-                  </Display>
-                  <button onClick={() => goToRegister(history)}>Inscrever-se</button>
+                  <ImgTravel>
+                  <div><img src='https://picsum.photos/200/250' /></div>
+                  
+                  </ImgTravel>
+                  <button onClick={() => details(travel.id)}>Detalhes</button>
                 </Travels>
               )
           })}

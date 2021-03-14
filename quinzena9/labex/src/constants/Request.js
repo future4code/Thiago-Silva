@@ -6,6 +6,6 @@ export const pontosParaViagens = ":thiago-silva-muyembe/"
 
 export const axiosConfig = {
     headers: {
-        Authorization: "thiago-silva-muyembe"
+        Authorization: localStorage.getItem("token")
     }
 }   

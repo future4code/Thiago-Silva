@@ -6,9 +6,6 @@ import { BASE_URL } from '../../constants/Request'
 
 import {RegisterContainer, ContainerInputs} from './RegisterStyle'
 
-import useProtectedPage from '../../hooks/useProtectedPage'
-
-
 export default function Register() {
     const [inputEmail, setInputEmail] = useState("")
     const [inputSenha, setInputSenha] = useState("")
@@ -46,11 +43,11 @@ export default function Register() {
         })
     } 
 
-    useProtectedPage()
 
     return(
         <div>
             <button onClick={goBack}>Retornar a home</button>
+            
             <RegisterContainer>
                 
                 <h1>Cadastrar</h1>
