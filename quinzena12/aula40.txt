@@ -1,0 +1,15 @@
+aula 40
+Exercicio 1:
+n
+Exercicio 2:
+2n
+Exercicio 3:
+4n
+Exercicio 4:
+listOfNumbers.length
+
+Exercicio 5:
+1 - O(n)
+2 - O(n)
+3 - O(n)
+4 - O(1)
